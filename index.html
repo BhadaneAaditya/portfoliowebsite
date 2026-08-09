@@ -3,28 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aaditya Bhadane — Software Developer / BhadaneOS</title>
-  <meta name="description" content="BhadaneOS — the portfolio of Aaditya Bhadane. Full-Stack & AI developer. Boot your own copy and explore." />
+  <title>Aaditya Bhadane — Software Developer / AadityaOS</title>
+  <meta name="description" content="AadityaOS — the portfolio of Aaditya Bhadane. Full-Stack & AI developer. Boot your own copy and explore." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="scanlines" aria-hidden="true"></div>
 
   <!-- ===== BOOT SCREEN ===== -->
   <div class="boot" id="boot">
     <div class="boot-cube" id="bootCube" aria-hidden="true">
       <div class="cube">
-        <div class="face front"><span class="boot-shape">📄</span></div>
-        <div class="face back"><span class="boot-shape">⚙️</span></div>
-        <div class="face right"><span class="boot-shape">🧠</span></div>
-        <div class="face left"><span class="boot-shape">🌐</span></div>
-        <div class="face top"><span class="boot-shape">▶</span></div>
-        <div class="face bottom"><span class="boot-shape">⚡</span></div>
+        <div class="face front"><span class="boot-shape">&gt;_</span></div>
+        <div class="face back"><span class="boot-shape">&lt;/&gt;</span></div>
+        <div class="face right"><span class="boot-shape">#!</span></div>
+        <div class="face left"><span class="boot-shape">root</span></div>
+        <div class="face top"><span class="boot-shape">sudo</span></div>
+        <div class="face bottom"><span class="boot-shape">$_</span></div>
       </div>
     </div>
-    <div class="boot-title">BHADANE<span class="os-red">OS</span></div>
+    <div class="boot-title">AADITYA<span class="os-ac">OS</span><span class="boot-cursor">_</span></div>
     <div class="boot-sub" id="bootSub"></div>
     <pre class="boot-log" id="bootLog"></pre>
     <div class="boot-bar"><span id="bootFill"></span></div>
@@ -38,14 +39,15 @@
   <!-- ===== TASKBAR ===== -->
   <header class="taskbar" id="taskbar" aria-hidden="true">
     <div class="tb-left">
-      <button class="tb-brand" data-open="bio">◤ <b>Bhadane</b><span class="os-red">OS</span></button>
+      <button class="tb-brand" data-open="bio">◤ <b>Aaditya</b><span class="os-ac">OS</span></button>
       <nav class="tb-nav" id="tbNav"></nav>
       <div class="tb-tasks" id="tbTasks"></div>
     </div>
     <div class="tb-right">
+      <button class="tb-term-btn" id="themeBtn" aria-label="toggle light / dark theme" title="toggle light / dark" aria-pressed="false"><span class="theme-ico" aria-hidden="true"></span></button>
       <button class="tb-term-btn" id="termBtn" aria-label="terminal" title="show / hide terminal">▮_</button>
       <span class="tb-status"><span class="green-dot"></span> available</span>
-      <span class="tb-net" title="Network host: aaditya@bhadane-os">host: aaditya@bh-os</span>
+      <span class="tb-net" title="Network host: root@aaditya-os">host: root@aaditya-os</span>
       <span class="tb-clock" id="clock"></span>
     </div>
   </header>
@@ -54,7 +56,7 @@
   <div class="term-tray" id="termTray" aria-hidden="true">
     <div class="term-history" id="termHistory"></div>
     <div class="term-inline" id="termHead">
-      <span class="term-prompt">aaditya@bhadane-os:~$</span>
+      <span class="term-prompt">aaditya@aaditya-os:~$</span>
       <input id="termInput" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type a command — try `help`" />
     </div>
   </div>
